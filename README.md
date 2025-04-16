@@ -1,0 +1,3 @@
+BTTT or BetterTicThanTac
+Simple command-line Tic-Tac-Toe that can't lose...
+Well for now its empty but you get the point.
