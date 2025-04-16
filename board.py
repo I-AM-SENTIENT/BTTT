@@ -20,41 +20,46 @@ def make_move(cords,side,board):
 
 
 def game_check(board):
+
     #Horizontal checks
     if board[0][0] == board[0][1] == board[0][2] and not None:
-        #Win
-        pass
+        side = board[0][0]
+        return(f"{side} has won")
     elif board[1][0] == board[1][1] == board[1][2] and not None:
-        #Win
-        pass
+        side = board[1][0]
+        return(f"{side} has won")
     elif board[2][0] == board[2][1] == board[2][2] and not None:
-        #Win
-        pass
+        side = board[2][0]
+        return(f"{side} has won")
+    
     #Vertical checks
+
     elif board[0][0] == board[1][0] == board[2][0] and not None:
-        #Win
-        pass
+        side = board[0][0]
+        return(f"{side} has won")
     elif board[0][1] == board[1][1] == board[2][1] and not None:
-        #Win
-        pass
+        side = board[0][1]
+        return(f"{side} has won")
     elif board[0][2] == board[1][2] == board[2][2] and not None:
-        #Win
-        pass
+        side = board[0][2]
+        return(f"{side} has won")
+    
     #Diagonal checks
+
     elif board[0][0] == board[1][1] == board[2][2] and not None:
-        #Win
-        pass
+        side = board[0][0]
+        return(f"{side} has won")
     elif board[2][0] == board[1][1] == board[0][2] and not None:
-        #Win
-        pass
+        side = board[2][0]
+        return(f"{side} has won")
+    
     #If we are here it means no one has won yet so we need to check for draws, or if the game is simply still going
     #For checking for draws we simply need to check if all the squares are filed
+
     elif all((elem is not None) for row in board for elem in row):
-        #Draw
-        pass
+        return(f"Its a draw")
     else:
-        #game continues
-        pass
+        return None
 
 def get_move():
     print("Select the square you want to make a move")
