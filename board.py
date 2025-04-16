@@ -17,8 +17,6 @@ def make_move(cords,side,board):
     return board
 
 
-
-
 def game_check(board):
 
     #Horizontal checks

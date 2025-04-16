@@ -1,3 +1,9 @@
 BTTT or BetterTicThanTac
 Simple command-line Tic-Tac-Toe that can't lose...
-Well for now its empty but you get the point.
+Well its not empty now.
+But it definitly can lose since it doesnt play.
+                                       ^
+                                       |
+                                       |
+                                       |
+                                subject to change
