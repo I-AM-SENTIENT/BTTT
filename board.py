@@ -47,6 +47,14 @@ def game_check(board):
     elif board[2][0] == board[1][1] == board[0][2] and not None:
         #Win
         pass
+    #If we are here it means no one has won yet so we need to check for draws, or if the game is simply still going
+    #For checking for draws we simply need to check if all the squares are filed
+    elif all((elem is not None) for row in board for elem in row):
+        #Draw
+        pass
+    else:
+        #game continues
+        pass
 
 def get_move():
     print("Select the square you want to make a move")
