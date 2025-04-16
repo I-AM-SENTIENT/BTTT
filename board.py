@@ -20,8 +20,33 @@ def make_move(cords,side,board):
 
 
 def game_check(board):
-    #Check if the game is over
-    pass
+    #Horizontal checks
+    if board[0][0] == board[0][1] == board[0][2] and not None:
+        #Win
+        pass
+    elif board[1][0] == board[1][1] == board[1][2] and not None:
+        #Win
+        pass
+    elif board[2][0] == board[2][1] == board[2][2] and not None:
+        #Win
+        pass
+    #Vertical checks
+    elif board[0][0] == board[1][0] == board[2][0] and not None:
+        #Win
+        pass
+    elif board[0][1] == board[1][1] == board[2][1] and not None:
+        #Win
+        pass
+    elif board[0][2] == board[1][2] == board[2][2] and not None:
+        #Win
+        pass
+    #Diagonal checks
+    elif board[0][0] == board[1][1] == board[2][2] and not None:
+        #Win
+        pass
+    elif board[2][0] == board[1][1] == board[0][2] and not None:
+        #Win
+        pass
 
 def get_move():
     print("Select the square you want to make a move")
