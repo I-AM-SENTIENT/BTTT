@@ -16,8 +16,10 @@ def side_to_move(move):
     side_to_move = None
     if move % 2 == 0:
         side_to_move = "O"
+        return side_to_move
     elif move % 2 == 1:
         side_to_move = "X"
+        return side_to_move
 
 
 def make_move(cords,side,board):
