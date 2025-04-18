@@ -34,40 +34,40 @@ def game_check(board):
     #Horizontal checks
     if board[0][0] == board[0][1] == board[0][2] and not None:
         side = board[0][0]
-        return True
+        return True, print(f"The game has been won by: {board[0][0]}")
     elif board[1][0] == board[1][1] == board[1][2] and not None:
         side = board[1][0]
-        return True
+        return True, print(f"The game has been won by: {board[1][0]}")
     elif board[2][0] == board[2][1] == board[2][2] and not None:
         side = board[2][0]
-        return True
+        return True, print(f"The game has been won by: {board[2][0]}")
     
     #Vertical checks
 
     elif board[0][0] == board[1][0] == board[2][0] and not None:
         side = board[0][0]
-        return True
+        return True, print(f"The game has been won by: {board[0][0]}")
     elif board[0][1] == board[1][1] == board[2][1] and not None:
         side = board[0][1]
-        return True
+        return True, print(f"The game has been won by: {board[0][1]}")
     elif board[0][2] == board[1][2] == board[2][2] and not None:
         side = board[0][2]
-        return True
+        return True, print(f"The game has been won by: {board[0][2]}")
     
     #Diagonal checks
 
     elif board[0][0] == board[1][1] == board[2][2] and not None:
         side = board[0][0]
-        return True
+        return True, print(f"The game has been won by: {board[0][0]}")
     elif board[2][0] == board[1][1] == board[0][2] and not None:
         side = board[2][0]
-        return True
+        return True, print(f"The game has been won by: {board[2][0]}")
     
     #If we are here it means no one has won yet so we need to check for draws, or if the game is simply still going
     #For checking for draws we simply need to check if all the squares are filed
 
     elif all((elem not in element_list) for row in board for elem in row):
-        return "aaaaa"
+        return True, print(f"The game has been drawed")
     else:
         return False
 
