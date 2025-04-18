@@ -1,3 +1,6 @@
+
+element_list=[0,1,2,3,4,5,6,7,8]
+
 def create_board():
     #make a board for the new game
     board = [[0,1,2],
@@ -8,7 +11,14 @@ def create_board():
 def render(board):
     for x in board:
         print(x)
-    
+
+def side_to_move(move):
+    side_to_move = None
+    if move % 2 == 0:
+        side_to_move = "O"
+    elif move % 2 == 1:
+        side_to_move = "X"
+
 
 def make_move(cords,side,board):
     x = cords[0]
@@ -22,42 +32,42 @@ def game_check(board):
     #Horizontal checks
     if board[0][0] == board[0][1] == board[0][2] and not None:
         side = board[0][0]
-        return(f"{side} has won")
+        return True
     elif board[1][0] == board[1][1] == board[1][2] and not None:
         side = board[1][0]
-        return(f"{side} has won")
+        return True
     elif board[2][0] == board[2][1] == board[2][2] and not None:
         side = board[2][0]
-        return(f"{side} has won")
+        return True
     
     #Vertical checks
 
     elif board[0][0] == board[1][0] == board[2][0] and not None:
         side = board[0][0]
-        return(f"{side} has won")
+        return True
     elif board[0][1] == board[1][1] == board[2][1] and not None:
         side = board[0][1]
-        return(f"{side} has won")
+        return True
     elif board[0][2] == board[1][2] == board[2][2] and not None:
         side = board[0][2]
-        return(f"{side} has won")
+        return True
     
     #Diagonal checks
 
     elif board[0][0] == board[1][1] == board[2][2] and not None:
         side = board[0][0]
-        return(f"{side} has won")
+        return True
     elif board[2][0] == board[1][1] == board[0][2] and not None:
         side = board[2][0]
-        return(f"{side} has won")
+        return True
     
     #If we are here it means no one has won yet so we need to check for draws, or if the game is simply still going
     #For checking for draws we simply need to check if all the squares are filed
 
-    elif all((elem is not None) for row in board for elem in row):
-        return(f"Its a draw")
+    elif all((elem not in element_list) for row in board for elem in row):
+        return "aaaaa"
     else:
-        return None
+        return False
 
 def get_move():
     print("Select the square you want to make a move")
