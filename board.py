@@ -25,6 +25,7 @@ def side_to_move(move):
 def make_move(cords,side,board):
     x = cords[0]
     y = cords[1]
+    board[x][y] = side
     return board
 
 
