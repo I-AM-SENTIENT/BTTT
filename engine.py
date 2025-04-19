@@ -6,6 +6,7 @@ from board import element_list
 
 def return_ai_move(board):
     #This should return CORDINATES of the move
+    #return x,y
     pass
 
 
